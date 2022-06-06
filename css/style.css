@@ -564,248 +564,150 @@ header nav .form i {
     font-size: 14px;
 }
 /* End Stats */
-/* Start Skills */
-/* .skills {
+.skills {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
 .skills .container {
-    position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
-@media (max-width: 992px) {
-    .skills .container {
-        flex-direction: column;
-    }
+.skills .heading-text {
+    text-align: center;
+}
+.skills .heading-text h3 {
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+.skills .heading-text p {
+    color: #777;
+    line-height: 2;
+    margin-bottom: 50px;
 }
 .skills .col {
     width: 45%;
-    position: relative;
 }
-@media (max-width: 992px) {
-    .skills .container .col {
+@media (max-width: 991px) {
+    .skills .container {
+        flex-direction: column;
+    }
+    .skills .col {
         width: 100%;
-        padding-top: 80px;
+    }
+    .skills .col.left {
+        margin-bottom: 100px;
     }
 }
-.skills .col .text {
-    text-align: center;
-    margin: 0 auto 70px;
-    width: 100%;
-}
-.skills .col .text h3 {
-    font-weight: normal;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-.skills .col .text p {
-    line-height: 2;
-    color: #777;
-}
-.skills .col.left {
-    margin-top: -70px;
-}
 .skills .col.left .cards {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
+    position: relative;
 }
 .skills .col.left .cards .card {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
-    max-width: 100%;
+    margin-bottom: 40px;
 }
 .skills .col.left .cards .card img {
     width: 100px;
     border-radius: 50%;
-}
-.skills .col.left .cards .card .description {
-    position: relative;
-    padding-left: 10px;
-    width: 100%;
-}
-@media (min-width: 768px) {
-    .skills .col.left .cards .card .description {
-        margin-left: 50px;
-        padding-left: 0;
-    }
+    margin-right: 50px;
 }
 @media (max-width: 767px) {
     .skills .col.left .cards .card {
         flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 60px;
     }
     .skills .col.left .cards .card img {
-        margin-bottom: 10px;
-    }
-    .skills .col.left .cards .card .description {
-        text-align: center;
-        margin-left: -15px;
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 }
-.skills .col.left .cards .card .description::after {
-    content: "John Deo, CEO";
+.skills .col.left .cards .card .text {
+    flex: 1;
+    position: relative;
+}
+.skills .col.left .cards .card .text p {
+    line-height: 1.8;
+}
+.skills .col.left .cards .card .text span {
     color: #777;
+    font-size: 14px;
+    display: block;
     position: absolute;
     right: 0;
-    bottom: 15px;
-    font-size: 14px;
+    bottom: -20px;
 }
-.skills .col.left .cards .card .description p {
-    line-height: 2;
-    margin-bottom: 30px;
-}
-.skills .col.left .cards .card .description hr {
-    color: #777;
+.skills .col.left .cards .card .text hr {
+    border: 0.5px solid #ddd;
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    width: 100%;
 }
 .skills .col.left .bullets {
     position: absolute;
+    bottom: -90px;
     left: 50%;
-    bottom: -30px;
     transform: translateX(-50%);
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .skills .col.left .bullets li {
     width: 13px;
     height: 13px;
+    border-radius: 50%;
     border: 1px solid #777;
-    border-radius: 50px;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 .skills .col.left .bullets li.active {
-    background-color: var(--main-color);
     border-color: var(--main-color);
+    background-color: var(--main-color);
 }
-@media (max-width: 1199px) {
-    .skills .col.right {
-        padding-bottom: 60px;
-    }
-}
-.skills .col.right .skills-level {
-    display: flex;
-    flex-direction: column;
-}
-.skills .col.right .skill {
-    position: relative;
-}
-.skills .col.right .skill h4 {
+.skills .col.right .web-lang div h4 {
     font-weight: normal;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
-.skills .col.right .skill span {
-    display: block;
+.skills .col.right .web-lang div .prog-field {
     width: 100%;
     height: 30px;
     background-color: #ddd;
+}
+.skills .col.right .web-lang div:not(:last-child) .prog-field {
     margin-bottom: 40px;
 }
-.skills .col.right .skill span span {
+.skills .col.right .web-lang div .prog-field span {
     display: block;
     height: 100%;
     background-color: var(--main-color);
     position: relative;
 }
-.skills .col.right .skill.adobe span span::before {
+.skills .col.right .web-lang div .prog-field span::before {
     content: attr(data-prog);
     width: 40px;
     height: 30px;
     background-color: #333;
     color: white;
     position: absolute;
-    top: 0;
     right: 0;
+    top: 0;
     transform: translate(50%, -150%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    line-height: 1.8;
     border-radius: 10%;
 }
-.skills .col.right .skill.adobe span span::after {
+.skills .col.right .web-lang div .prog-field span::after {
     content: "";
     border: 10px solid;
     border-color: #333 transparent transparent transparent;
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(70%, -90%);
+    transform: translate(50%, -90%);
 }
-.skills .col.right .skill.htmlcss span span::before {
-    content: attr(data-prog);
-    width: 40px;
-    height: 30px;
-    background-color: #333;
-    color: white;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(50%, -150%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10%;
-}
-.skills .col.right .skill.htmlcss span span::after {
-    content: "";
-    border: 10px solid;
-    border-color: #333 transparent transparent transparent;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(70%, -90%);
-}
-.skills .col.right .skill.js span span::before {
-    content: attr(data-prog);
-    width: 40px;
-    height: 30px;
-    background-color: #333;
-    color: white;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(50%, -150%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10%;
-}
-.skills .col.right .skill.js span span::after {
-    content: "";
-    border: 10px solid;
-    border-color: #333 transparent transparent transparent;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(70%, -90%);
-}
-.skills .col.right .skill.php span span::before {
-    content: attr(data-prog);
-    width: 40px;
-    height: 30px;
-    background-color: #333;
-    color: white;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(50%, -150%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10%;
-}
-.skills .col.right .skill.php span span::after {
-    content: "";
-    border: 10px solid;
-    border-color: #333 transparent transparent transparent;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(70%, -90%);
-} */
-
-
 /* End Skills */
